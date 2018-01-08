@@ -3,7 +3,7 @@
 2. buat variabel 'roman' yang bernilai array huruf romawi
 3. buat variabel 'arabic' yang bernilai array angka arabic
 4. buat variabel 'result' yang bernilai string kosong
-5. buat perulangan dari panjang array 'arabic' sampai dengan 10
+5. buat perulangan dari panjang array 'arabic' sampai dengan 0
 6. selama nilai index array 'arabic' lebih kecil sama dengan 'angka'
   - tambahkan index array 'arabic'
   - kurangkan angka dengan index array 'arabic'
