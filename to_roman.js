@@ -1,27 +1,15 @@
 function to_roman(num) {
-    let tampung = "";
-    let bank = {
-        I: 1,
-        IV: 4,
-        V: 5,
-        IX: 9,
-        X: 10,
-        XL: 50,
-        L: 50,
-        XC: 90,
-        C: 100,
-        CD: 400,
-        D: 500,
-        M: 1000,
-    };
+    let tampung = '';
+    const rom = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+    const alfa = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 
-    for (let i = 0; i <= 3000; i++) {
-        if (
-
+    for (let i = 0; i < alfa.length - 1; i++) {
+        while (num >= alfa[i]) {
+            tampung += rom[i];
+            num -= alfa[i];
         }
     }
-
+    return tampung;
 }
 
-
-console.log(to_roman(476))
+console.log(to_roman(120))
