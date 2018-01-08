@@ -6,25 +6,22 @@ const ribuan = ['', 'M', 'MM', 'MMM'];
 
 function to_roman(angka){
     var arrAngka = (String(angka)).split('');
-    var result = '';
 
-    if(arrAngka.length == 4){
-        result += ribuan[arrAngka[0]]+ratusan[arrAngka[1]]+puluhan[arrAngka[2]]+satuan[arrAngka[3]];
+    if(arrAngka.length == 1){
+        return satuan[arrAngka[0]];
     }
-
-    else if(arrAngka.length == 3){
-        result += ratusan[arrAngka[0]]+puluhan[arrAngka[1]]+satuan[arrAngka[2]];
-    }
-
     else if(arrAngka.length == 2){
-        result += puluhan[arrAngka[0]]+satuan[arrAngka[1]];
+        return puluhan[arrAngka[0]]+satuan[arrAngka[1]];
     }
-
-    else if(arrAngka.length == 1){
-        result += satuan[arrAngka[0]];
+    else if(arrAngka.length == 3){
+        return ratusan[arrAngka[0]]+puluhan[arrAngka[1]]+satuan[arrAngka[2]];
     }
-    
-    return result;
+    else if(arrAngka.length == 4){
+        return ribuan[arrAngka[0]]+ratusan[arrAngka[1]]+puluhan[arrAngka[2]]+satuan[arrAngka[3]];
+    }
+    else{
+        return "";
+    }
 }
 
 console.log(to_roman(4));
