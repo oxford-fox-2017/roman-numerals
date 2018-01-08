@@ -5,6 +5,7 @@ set romawi isi dengan roman num dengan urutan yang sama dengan num
 looping num
 jika integer lebih besar atau sama dengan num i maka masukan nilai romawi i ke hasil
 kurangi nilai integer dengan nilai num i 
+return hasilnya
 */
 function to_roman(integers){
 const num = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
@@ -29,3 +30,4 @@ return hasil;
  console.log('9 | IX|', to_roman(9));
 console.log('23 | XXIII|', to_roman(23));
 console.log('120 | CXX|', to_roman(120));
+console.log('1450 | MCDL|', to_roman(1450));
